@@ -1,0 +1,7 @@
+.DS_Store
+SQL Tabs.app
+build/*
+.build
+node_modules/*
+sqltabs.dmg
+.idea

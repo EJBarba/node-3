@@ -1,0 +1,665 @@
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{ 
+    height: 100%;
+    overflow: hidden;
+    margin:0; 
+    padding:0; 
+    font-size: xx-large;
+}
+
+.tab-app {
+    display: flex;
+    flex-direction: column;
+    height: calc(100%);
+    min-height: calc(100%);
+    width: 100%;
+    margin-top: 0.2vh;
+}
+
+.tab-navigator{
+    display: block;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.tab-title{
+    display: inline-block;
+    min-width: 60px;
+    margin-left: 10px;
+}
+
+.tab-close-button{
+    margin-left: 10px;
+}
+
+.nav > li > a {
+    padding: 3px 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+.tab-container {
+    width: 100%;
+    flex: 1;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+}
+
+.tab-content-without-toolbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.form-group{
+    margin-bottom: 1px;
+}
+
+.btn{
+    font-size: inherit;
+}
+
+
+.tab-toolbar{
+    display: table;
+    padding: 3px;
+}
+
+.tab-toolbar-form{
+}
+
+.toolbar-button{
+    display: table-cell;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.input-connstr-div{
+    display: table-cell;
+    width: 100%;
+}
+
+
+.input-connstr{
+    padding: 3px 12px;
+    font-size: inherit;
+    height: inherit;
+    padding-right: 50px;
+}
+
+.tab-split {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.tab-split-container{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.hsplitter {
+    cursor: ns-resize;
+    height: 3px;
+    width: 100;
+}
+
+.vsplitter {
+    display: inline-block; 
+    cursor: ew-resize;
+    width: 3px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.edit-area{
+    height: 100%;
+    width: 100%;
+}
+
+.tab-editor {
+    height: 50vh;
+    width: 100%;
+    overflow: scroll;
+    border:1px solid;
+}
+
+.output-console {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 40px;
+    padding-top: 5px;
+}
+
+.output-message {
+    padding-left: 10px;
+}
+
+.ace_editor{
+    width: 100%;
+    height: 100%;
+    font-size: inherit !important;
+}
+
+.ace_content{
+    z-index: 1;
+}
+
+.connection-error{
+    font-family: monospace;
+    white-space: pre-line;
+}
+
+.query-error{
+    font-family: monospace;
+    white-space: pre;
+}
+
+.floating-cols-header{
+    position: fixed;
+    display: none;
+    margin-top: -5px;
+}
+
+.floating-header-table{
+}
+
+.floating-field {
+    display: inline-block;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* table column */
+.table-column-header{
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: top !important;
+}
+
+.table-column-header-info{
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.table-column-sorted-asc:after{
+    content: "\e094";
+    font-family: 'Glyphicons Halflings';
+}
+
+.table-column-sorted-desc:after{
+    content: "\e093";
+    font-family: 'Glyphicons Halflings';
+}
+
+.table-column-sorted-none:after{
+    padding-left: 1.8em;
+}
+
+.table-column-header-datatype{
+    font-size: 0.6em;
+}
+
+/* table */
+
+.table-resultset {
+    width: auto;
+    margin-left: 10px;
+}
+
+.table-resultset td {
+  white-space: pre-wrap;
+}
+
+.record-numeric-cell{
+    text-align: right;
+}
+
+.duration-div {
+    margin-left: 10px;
+    margin-right: 20px;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.record-json-value{
+    color: inherit;
+    background-color: inherit;
+    border: none;
+}
+
+
+/* share button */
+.duration-div .btn{
+}
+
+/* */
+
+.duration-table tr td:first-child{
+    text-align: left;
+}
+
+.rows-count-div{
+    margin-left: 10px;
+}
+
+.conn_history{
+    position: absolute;
+    width: 75vw;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.conn_history_list{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.conn_history_hidden{
+    display: none;
+}
+
+.toggle-theme-button{
+    position: absolute;
+    cursor: pointer;
+    right: 30px;
+    margin-top: 5px;
+}
+
+.conn-color-button{
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    margin-top: 5px;
+}
+
+.conn_history_item{
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.connection-color-circle{
+    width: 14px;
+    height: 14px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.conn_item_alias{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.conn_item_str{
+    padding-left: 5px;
+}
+
+.conn_item_remove{
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: no-drop;
+}
+
+.c3-legend-item{
+    font-size: inherit;
+}
+
+.c3 svg {
+    font-size: inherit;
+}
+
+.search-box{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 50%;
+}
+
+.alert{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-logo{
+    width: 50px;
+}
+
+.about-table{
+    width: 100%;
+}
+
+.about-table tr td:first-child{
+    width: 70px;
+}
+
+.progress{
+    width: 100%;
+}
+
+.object-info-div{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.object-info-name{
+    font-weight: bold;
+}
+
+.object-info-columns-table td{
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.object-info-columns-table th{
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.history-view{
+    margin-top: 10px;
+}
+
+.history-header{
+    width: 100%;
+}
+
+.history-header td{
+    text-align: center;
+}
+
+.history-header tr td:first-child{
+    text-align: left;
+}
+
+.history-header tr td:last-child{
+    width: 80px;
+    padding-left: 20px;
+
+}
+
+.history-filter{
+    width: 100%;
+    font-weight: bold;
+    font-size: inherit;
+    min-height: inherit;
+}
+
+.markdown-block{
+    padding-left: 10px;
+}
+
+.query-block{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.cloud-error{
+    word-break: break-all;
+}
+
+.target-server-input{
+  width: 100%;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 3px;
+  padding-left: 8px;
+}
+
+.target-server-encryption-switch{
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+}
+
+.schema-nav{
+    padding-top: 10px;
+}
+
+.project-div{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    z-index: 1;
+    position: relative;
+    overflow: auto;
+}
+
+.project-list{
+    padding-top: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+}
+
+.project-toolbar{
+    position: relative;
+    padding-top: 10px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 200%;
+    border-top: solid 1px;
+    margin-top: 5px;
+}
+
+.project-button{
+    display: inline-block;
+    cursor: pointer;
+    width: calc(100% - 50px);
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.project-button-remove{
+    display: inline;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+.project-current-path{
+    margin-left: -10px;
+}
+
+.project-files-list{
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}
+
+.project-folder{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.project-folder:hover{
+    cursor: pointer;
+}
+
+.project-folder-icon{
+    margin-right: 10px;
+}
+
+.project-file{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.project-file:hover{
+    cursor: pointer;
+}
+
+.completion-list{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    max-height: 200px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.completion-list > ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.completion-list > ul > li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* sqldoc csv render*/
+.csv-div {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.csv-fields-div {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.csv-field {
+    font-weight: bold;
+}
+.csv-separator{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.non-printed-char{
+    color: red;
+}
+
+
+.input-connstr-color{
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+
+/* Color picker */
+.color-picker{
+    position: absolute;
+    z-index: 100;
+    right: 10px;
+    top: 80px;
+}
+
+.clear-color{
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Modal from react-bootstrap */
+
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+
+/* data charts */
+
+div[data-chart-id]{
+    margin-left: 10px;
+}
+
+
+/* bubble chart */
+
+.bubbles-tooltip{
+position: absolute;
+z-index: 10;
+visibility: hidden;
+color: white;
+padding: 8px;
+background-color: rgba(0, 0, 0, 0.75);
+border-radius: 6px;
+font: 12px sans-serif;
+}
+
+/* explain plan */
+.explain-plan-header-title{
+}
+
+.explain-plan-node-title{
+}
+
+.explain-plan-node-arrow{
+    cursor: pointer;
+}
+
+.explain-plan-node-arrow-hidden{
+    font-size: 0;
+    color: rgba(0,0,0,0);
+}
+
+.explain-plan-node-skipped-note{
+    font-size: 0;
+    color: rgba(0,0,0,0);
+}
+
+.explain-plan-details{
+    font-family: monospace;
+}
+
+.explain-plan-rownum-switch{
+    cursor: pointer;
+}
+
+.explain-plan-view-switcher{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.explain-plan-mount-div{
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
+    border: solid 1px;
+}
+
+
+/* SVG */
+
+path.link{
+    fill: none;
+}
+
+/* */

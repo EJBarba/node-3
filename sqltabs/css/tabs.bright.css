@@ -1,0 +1,151 @@
+
+.conn_history{
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.input-connstr{
+    background-color: rgba(253, 253, 253, 0.7);
+}
+
+.input-connstr:focus{
+    background-color: #ffffff;
+}
+
+.conn_history_item:hover{
+    background-color: lightgrey;
+}
+
+.conn_history_item_active{
+    background-color: lightgrey;
+}
+
+.render-time{
+    font-family: monospace;
+}
+
+.ace_comment {
+    color: #236e24;
+}
+
+.ace_keyword{
+    color: rgb(147, 15, 128);
+}
+
+.ace_constant{
+    color: rgb(0, 0, 205);
+}
+
+.ace_content{
+    background-color: rgb(255, 255, 255);
+}
+
+.omitted-message{
+    color: rgb(147, 15, 128);
+}
+
+.hsplitter{
+    background-color: #dcdcdc;
+}
+
+.vsplitter{
+    background-color: #dcdcdc;
+}
+
+.project-div{
+    background-color: rgb(255, 255, 255);
+}
+
+.project-toolbar a{
+    color: #666666;
+}
+
+.project-toolbar a:hover{
+    color: black;
+}
+
+.project-folder:hover{
+    background-color: #DDDDDD;
+}
+
+.project-file:hover{
+    background-color: #DDDDDD;
+}
+
+.project-button:hover{
+    background-color: #DDDDDD;
+}
+
+.project-button-active{
+    background-color: #DDDDDD;
+}
+
+.project-button-remove:hover{
+    color: #000000;
+}
+
+.completion-list{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgb(220, 220, 220);
+}
+
+.completion-hint-active{
+    background-color: #DDDDDD;
+}
+
+/* sqldoc csv render*/
+.csv-separator{
+    color: rgb(84, 149, 213);
+    font-weight: bold;
+}
+
+
+/* sqldoc floating header*/
+.floating-cols-header {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* sqldoc table records */
+.record-negative-hl{
+    background-color: #d6481c;
+    color: white;
+}
+.record-neutral-hl{
+    background-color: #498a4a;
+    color: white;
+}
+.record-positive-hl{
+    background-color: #55a9f3;
+    color: white;
+}
+
+
+/* explain plan */
+
+.explain-plan-tree-circle{
+    stroke: #607d8b;
+    fill: #cbea8b;
+}
+
+.explain-plan-cte-record{
+    color: #da8814;
+}
+
+.explain-plan-tree-node-text{
+    fill: #607d8b;
+}
+
+.explain-plan-tree-link{
+    stroke: #607d8b;
+}
+
+.explain-plan-cte-link{
+    stroke: #c09853;
+}
+
+.explain-plan-tree-circle-never-executed{
+    fill: rgba(135, 175, 210, 1);
+}
+
+
+/* */
