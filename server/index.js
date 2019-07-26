@@ -23,7 +23,11 @@ massive({
   app.get("/api/users/:id", users.getById);
   app.get("/api/users/:id/profile", users.getProfile);
   app.post("/api/posts", users.createPost);
-
+  app.get("/api/posts", users.getPost);
+  app.get("/api/posts/:userId", users.getPostByUserId);
+  app.patch("/api/posts", users.updatePost);
+  app.post("/api/comments", users.comment);
+  app.patch("/api/comments", users.editComment);
   const PORT = 3001;
   app.listen(PORT, () => {
     console.log(`Server listening (O-O) on port ${PORT}`);

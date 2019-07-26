@@ -14,7 +14,7 @@ exports.up = pgm => {
     postId: {
       type: "integer",
       notNull: true,
-      references: '"users"'
+      references: '"posts"'
     },
     comment: {
       type: "text",
