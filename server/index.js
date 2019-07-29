@@ -2,7 +2,6 @@ const express = require("express");
 const massive = require("massive");
 
 const users = require("./controllers/users.js");
-const safeStringify = require("fast-safe-stringify");
 
 massive({
   host: "localhost",
@@ -29,6 +28,10 @@ massive({
   app.post("/api/comments", users.comment);
   app.patch("/api/comments", users.editComment);
   const PORT = 3001;
+
+  //updates for auth
+  app.get("/api/protected/data", users.auth);
+
   app.listen(PORT, () => {
     console.log(`Server listening (O-O) on port ${PORT}`);
   });
